@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # aaron.yee
 
 The repository is the source code of my personal blog at [https://aaronyee.com](https://aaronyee.com).
