@@ -1,6 +1,6 @@
 # aaron.yee
 
-The repository is the source code of my personal blog at [aaronyee.com](aaronyee.com).
+The repository is the source code of my personal blog at [aaronyee.com](http://aaronyee.com).
 
 The style of the blog is produced by [Martin Hilscher](https://xinitrc.de) at https://xinitrc.de while the contents by me.
 
@@ -8,7 +8,7 @@ I really want to express my great appreciation to [Martin Hilscher](https://xini
 
 ---
 
-这个仓库是我个人博客 [AaronYee Blog](aaronyee.com) 的整个源码，博客基于hakyll编译生成，系统运行环境为windows 7 64-bit。
+这个仓库是我个人博客 [AaronYee Blog](http://aaronyee.com) 的整个源码，博客基于hakyll编译生成，系统运行环境为windows 7 64-bit。
 
 博客样式由 [Martin Hilscher](https://xinitrc.de) 所设计。
 
