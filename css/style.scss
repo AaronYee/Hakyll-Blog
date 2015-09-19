@@ -1,0 +1,246 @@
+@import "compass/reset";
+@import "base"; 
+@import "colors";
+@import "utils";
+@import "about";
+@import "zenburn";
+@import "contact";
+@import "article";
+@import "logo";
+@import "sidebar";
+@import "basehtml";
+
+html, body {
+  height: 100%;
+}
+
+html {
+  font-family: "Fira Sans", "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+body {
+  color: $textcolor;
+  background-color: $cbwhite;
+}
+
+#indieauth {
+  display: none
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 30em;
+}
+
+.animate {
+  @include transition(all 1s ease);
+}
+
+.animate.ng-enter, .animate.ng-leave.ng-leave-active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.animate.ng-enter, .animate.ng-leave.ng-leave-active {
+  opacity: 0;
+}
+
+.animate.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+
+.main-content {
+  font-size: .875rem;
+  font-weight: 400;
+  height: 100%;
+  max-width: 40rem;
+
+  margin: 5 * $baseunit auto 0 auto;
+
+  z-index: 50;
+
+  img {
+    display: block;
+    margin: 0 auto 1.6em auto;
+  }
+
+  @for $i from 1 through 6 {
+    h#{$i} {
+      margin-bottom: 1 * $baseunit;
+      border-bottom: 1px solid $textcolor;
+
+      a, a:visited {
+        color: inherit;
+      }
+    }
+  }
+  
+  & > section {
+    padding: 2em;
+  }
+
+  section > *:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  section {
+    will-change: transform, opacity;
+
+    padding-bottom: 2em;
+
+    p {
+      padding-bottom: 1em;
+    }
+
+    p:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  img {
+    max-width: 90%;
+    height: auto;
+
+    margin: 0 auto 1.6em auto;
+  }
+
+  a, a:visited {
+    color: $contentlinkcolor;
+  }
+
+  table.meta {
+    margin-bottom: 1.6em;
+
+    td.heading {
+      font-weight: 500;
+      padding-right: .5em;
+    }
+
+    td {
+      vertical-align: top;
+    }
+  }
+}
+
+@media (min-width: 48rem) {
+  .main-content {
+    margin: 5em auto 0 auto;
+
+    @for $i from 1 through 6 {
+      h#{$i} {
+        margin-bottom: 1rem;
+        border-bottom: 1px solid $textcolor;
+      }
+    }
+
+    font-size: 1rem;
+    width: 40em;
+  }
+}
+
+@media (min-width: 64rem) {
+  .main-content {
+
+    margin: 0 0 0 5em;
+
+    & > section {
+      padding: 1em 2em;
+    }
+  }
+}
+
+#post-archive, #talk-archive, #tags {
+  section.year {
+    border-top: thin solid $textcolor;
+    padding-top: .5em;
+
+    &:first-child {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    h2.year {
+      float: left;
+      width: 8 * $baseunit;
+      border-bottom: none;
+      overflow: hidden;
+    }
+
+    @media (min-width: 48rem) {
+      h2.year {
+        width: 8rem;
+      }
+    }
+
+    section.month {
+      margin-left: 8em;
+    }
+  }
+
+  span.day {
+    display: block;
+    width: 4em;
+    float: left;
+    font-weight: 900;
+  }
+
+  span.title {
+    display: block;
+    margin-left: 4em;
+  }
+
+  span.date {
+    float: left;
+    display: block;
+    width: 7em;
+    font-weight: 900;
+  }
+}
+
+.archive {
+  padding: 1em 2em;
+
+  font-size: 2em;
+  text-align: center;
+}
+
+.elastic-container {
+  position: relative;
+  padding-bottom: 56.25% !important;
+  padding-top: 30px !important;;
+  height: 0;
+  overflow: hidden;
+  margin: auto 2em;
+}
+
+.elastic-container iframe, .elastic-container object, .elastic-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+@media(min-width: 64rem) {
+  
+.half {
+  float: left;
+  width: 50%;
+}
+
+.vcard::after, .activities::after  {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+}
